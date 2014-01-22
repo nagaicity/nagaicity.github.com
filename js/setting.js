@@ -18,9 +18,9 @@ OpenSpending.Styles = OpenSpending.Styles || {};
 OpenSpending.Styles.Cofog = {
 
   /* nag cofog */
-  '20130100': { icon: 'icons/government.svg', color: '#C75746', bcolor: '#935B3B' },
-  '20130110': { icon: 'icons/government.svg', color: '#C75746', bcolor: '#935B3B' },
-  '20130200': { icon: 'icons/publicaffairs.svg', color: '#C75746', bcolor: '#935B3B' },
+  '20130100': { icon: 'icons/nagai/1-2.svg', color: '#C75746', bcolor: '#935B3B' },
+  '20130110': { icon: 'icons/nagai/1-2.svg', color: '#C75746', bcolor: '#935B3B' },
+  '20130200': { icon: 'icons/nagai/2-2.svg', color: '#C75746', bcolor: '#935B3B' },
   '20130210': { icon: 'icons/publicaffairs.svg', color: '#C75746', bcolor: '#935B3B' },
   '20130220': { icon: 'icons/publicaffairs.svg', color: '#C75746', bcolor: '#0AB971' },
   '20130230': { icon: 'icons/publicaffairs.svg', color: '#C75746', bcolor: '#0AB971' },
