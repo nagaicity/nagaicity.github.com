@@ -8,9 +8,9 @@
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
    version="1.1"
-   width="100"
-   height="100"
-   viewBox="0 0 100 100"
+   width="43.220341"
+   height="41.101696"
+   viewBox="0 0 43.220341 41.101696"
    id="Ebene_1"
    xml:space="preserve"><metadata
      id="metadata7272"><rdf:RDF><cc:Work
@@ -20,8 +20,9 @@
      cx="50"
      cy="50"
      r="50"
+     transform="scale(0.43220339,0.41101695)"
      id="circle7264" /><path
      d="M 49.999999,45.338982 34.191568,36.196437 17.698118,44.035996 21.508121,26.176083 8.9555009,12.912436 27.118644,11.016948 l 8.735504,-16.0369434 7.415436,16.6884374 17.951459,3.35227 -13.580151,12.20951 z"
-     transform="translate(20.762712,23.305084)"
+     transform="matrix(0.62706738,0,0,0.63819085,-0.47376075,4.96338)"
      id="path7321"
      style="fill:#00ffff" /></svg>
