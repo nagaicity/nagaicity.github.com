@@ -209,7 +209,7 @@ OpenSpending.DailyBread = function (elem) {
           for (j=0;j<paths.length;j++) joined += paths[j].getAttribute('d')+' ';
           icon = paper.path(joined);
 //↓ここをコメントアウトすると白抜きでなく黒線になる
-//          icon.attr({ fill: 'white', stroke: 'none' });
+          icon.attr({ fill: 'white', stroke: 'none' });
           icon.scale(iconRad/50, iconRad/50, 0, 0);
         } catch (e) {
           // failed to handle SVG
