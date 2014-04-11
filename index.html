@@ -59,7 +59,6 @@ function setData(frmObj) {
 			break;
         }
     }
-	alert(UseData.year);
     location.href = "index.html?requestYear=" + UseData.year + "&requestName=" + UseData.identifier;
 }
 window.onpageshow=function(){
@@ -72,7 +71,7 @@ function checkSelect( obj, val ){
     for(var i = 0; i < obj.length; i++){
         if(obj[i].value == val){
             obj[i].selected=true;
-            // alert( "list year true : " + obj[i].value );
+             alert( "list year true : " + obj[i].value );
             break;
         }
         // } else {
