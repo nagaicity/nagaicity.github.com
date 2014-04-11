@@ -47,7 +47,6 @@ datas[2] = new Array();
 datas[2][0] = "2012";
 datas[2][1] = "";
 
-alert(datas[2][0]);
 
 function setData(frmObj) {
     var yearList=document.getElementById('year');
@@ -60,6 +59,7 @@ function setData(frmObj) {
 			break;
         }
     }
+	alert(UseData.year);
     location.href = "index.html?requestYear=" + UseData.year + "&requestName=" + UseData.identifier;
 }
 window.onpageshow=function(){
