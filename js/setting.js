@@ -43,7 +43,7 @@ UseData.year = '2014';
 		}
 */
 
-		if( paramArray["requestYear"] != null) {
+		if( paramArray["year"] != null) {
 			UseData.year = paramArray["year"];
 		}else {
 			UseData.year = "2014";
