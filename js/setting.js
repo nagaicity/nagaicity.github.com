@@ -57,6 +57,7 @@ UseData.year = '2014';
 			UseData.identifier = "nagai_budget_2013";
 			break;
 		default:
+			UseData.year = "2014";
 			UseData.identifier = "nagai_budget_2014";
 			break;
 	}
