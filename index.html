@@ -7,15 +7,18 @@ title: The Daily Bread
 function setData(frmObj) {
     var yearList=document.getElementById('year');
     var options=document.getElementById('year').options;
+
+/*    
     UseData.year=options.item(yearList.selectedIndex).value;
-    
     for( var i = 0; i < datas.length; i++ ) {
         if( datas[i][0] == UseData.year ) {
 			UseData.identifier = datas[i][1];
 			break;
         }
     }
-    location.href = "index.html?requestYear=" + UseData.year + "&requestName=" + UseData.identifier;
+*/
+    //location.href = "index.html?requestYear=" + UseData.year + "&requestName=" + UseData.identifier;
+    location.href = "index.html?requestYear=" + options.item(yearList.selectedIndex).value;
 }
 
 </script>
