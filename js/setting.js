@@ -64,11 +64,6 @@ checkSelect( document.getElementById( "year" ), UseData.year );
 OpenSpending.identifier = UseData.identifier;
 OpenSpending.year = UseData.year;
 
-
-
-alert(OpenSpending.identifier);
-alert(OpenSpending.year);
-
 OpenSpending.Styles = OpenSpending.Styles || {};
 
 OpenSpending.Styles.Cofog = {
