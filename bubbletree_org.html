@@ -3,34 +3,6 @@ layout: default
 title: 使途別予算額
 ---
 
-<script type="text/javascript">
-
-var UseData = UseData || {};
-
-//年度が選択された時にURLパラメータを加えたURLにジャンプ
-function setData(frmObj) {
-    var yearList=document.getElementById('year');
-    var options=document.getElementById('year').options;
-    location.href = "index.html?requestYear=" + options.item(yearList.selectedIndex).value;
-}
-
-//年度のselect を selected にする
-function checkSelect( obj, val ){
-    for(var i = 0; i < obj.length; i++){
-        if(obj[i].value == val){
-            obj[i].selected=true;
-//            alert( "list year true : " + obj[i].value );
-            break;
-//        }
-         } else {
-         	obj[i].selected=false;
-         }
-    }
-}
-
-</script>
-
-
 <div class="row">
   <script type="text/javascript">
   yepnope.errorTimeout = 1000;
@@ -92,22 +64,6 @@ function checkSelect( obj, val ){
   });
 
   </script>
-
-  <form name=selyear action="#">
-      <table>
-          <tr>
-              <th>表示する年度を選んでください </th>
-              <td>
-                  <select name="selectedYear" id="year" onchange="setData(this.form);" style="width:200px;">
-                      <option value="2014">2014年度</option>
-                      <option value="2013">2013年度</option>
-                      <!--<option value="2011">2011年度</option>-->
-                    <!--<option value="2010">2010年度</option>-->
-                  </select>
-              </td>
-          </tr>
-      </table>
-  </form>
 
   <div class="bubbletree-wrapper">
     <div id="bubbletree" class="bubbletree"></div>
