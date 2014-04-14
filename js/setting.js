@@ -43,17 +43,17 @@ UseData.year = '2014';
 		}
 */
 
-		if( paramArray["year"] != null) {
-			UseData.year = paramArray["year"];
+		if( paramArray["requestYear"] != null) {
+			UseData.year = paramArray["requestYear"];
 		}else {
 			UseData.year = "2014";
 		}
 
 	switch(UseData.year){
-		case 2014:
+		case "2014":
 			UseData.identifier = "nagai_budget_2014";
 			break;
-		case 2013:
+		case "2013":
 			UseData.identifier = "nagai_budget_2013";
 			break;
 		default:
