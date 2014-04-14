@@ -36,6 +36,7 @@ var UseData = UseData || {};
 			UseData.year = "2014";
 		}
 
+
 	switch(UseData.year){
 		case "2014":
 			UseData.identifier = "nagai_budget_2014";
