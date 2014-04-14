@@ -14,10 +14,6 @@ var UseData = UseData || {};
 //OpenSpending.identifier = 'nagai_budget_2014';
 //OpenSpending.year = '2014';
 
-//UseData.identifier = 'nagai_budget_2014';
-//UseData.year = '2014';
-
-
 		var url = location.href;
 		var params = url.split("?");
 		var paramms = [];
