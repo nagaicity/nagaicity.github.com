@@ -29,22 +29,12 @@ var UseData = UseData || {};
 	    	paramArray.push(item[0]);
 	    	paramArray[item[0]] = item[1];
 		}
-/*
-		if( paramArray["requestYear"] != null  && paramArray["requestName"] != null ) {
-			UseData.year = paramArray["requestYear"];
-			UseData.identifier = paramArray["requestName"];
-		}else {
-			UseData.year = "2014";
-			UseData.identifier = "nagai_budget_2014";
-		}
-*/
 
 		if( paramArray["requestYear"] != null) {
 			UseData.year = paramArray["requestYear"];
 		}else {
 			UseData.year = "2014";
 		}
-
 
 	switch(UseData.year){
 		case "2014":
