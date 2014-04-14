@@ -13,6 +13,8 @@ var OpenSpending = OpenSpending || {};
 OpenSpending.identifier = 'nagai_budget_2014';
 OpenSpending.year = '2014';
 
+/*
+
 		var url = location.href;
 		var params = url.split("?");
 		var paramms = [];
@@ -22,7 +24,6 @@ OpenSpending.year = '2014';
 		}
 
 		var paramArray = [];
-/*
 		for ( i = 0; i < paramms.length; i++ ) {
 	    	var item = paramms[i].split("=");
 	    	paramArray.push(item[0]);
@@ -37,11 +38,12 @@ OpenSpending.year = '2014';
 			UseData.year = "2014";
 			UseData.identifier = "nagai_budget_2014";
 		}
-*/
 
 
 OpenSpending.identifier = UseData.identifier;
 OpenSpending.year = UseData.year;
+
+*/
 
 alert(OpenSpending.identifier);
 alert(OpenSpending.year);
