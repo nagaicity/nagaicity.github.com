@@ -2,23 +2,7 @@
 layout: default
 title: The Daily Bread
 ---
-
 <script type="text/javascript">
-
-var datas = new Array();
-
-datas[0] = new Array();
-datas[0][0] = "2013";
-datas[0][1] = "nagai_budget_2013";
-
-datas[1] = new Array();
-datas[1][0] = "2014";
-datas[1][1] = "nagai_budget_2014";
-
-datas[2] = new Array();
-datas[2][0] = "2012";
-datas[2][1] = "";
-
 
 function setData(frmObj) {
     var yearList=document.getElementById('year');
@@ -33,84 +17,67 @@ function setData(frmObj) {
     }
     location.href = "index.html?requestYear=" + UseData.year + "&requestName=" + UseData.identifier;
 }
-window.onpageshow=function(){
-	//window.onload=function(){
-    //getUseDatas();
-    checkSelect( document.getElementById( "year" ), UseData.year );
-}
-
-function checkSelect( obj, val ){
-    for(var i = 0; i < obj.length; i++){
-        if(obj[i].value == val){
-            obj[i].selected=true;
-            alert( "list year true : " + obj[i].value );
-            break;
-//        }
-         } else {
-         	obj[i].selected=false;
-         }
-    }
-}
-
-alert("check point1");
-
-var display = function() {
-    (function ($) {
-     $(function () {
-       $('#preloader .txt').html('loading data');
-       var db = new OpenSpending.DailyBread($('#dailybread'));
-       
-       new OpenSpending.Aggregator({
-                                   apiUrl: 'http://openspending.org/api',
-                                   //localApiCache: 'aggregate.json',
-                                   dataset: OpenSpending.identifier,
-                                   drilldowns: ['category', 'subcategory'],
-                                   cuts: ['year:' + OpenSpending.year],
-                                   rootNodeLabel: 'Total',
-                                   breakdown: 'subcategory',
-                                   callback: function(data) {
-                                   
-                                   $('#content-wrap').show();
-                                   $('#preloader').remove();
-                                   
-                                   db.setDataFromAggregator(data, ['unknown']);
-                                   db.setIconLookup(function(name) {
-                                                    var style = OpenSpending.Styles.Cofog[name];
-                                                    if (style != undefined) {
-                                                    return style['icon'];
-                                                    }
-                                                    return 'icons/unknown.svg';
-                                                    });
-                                   db.draw();
-                                   }
-                                   });
-       OpenSpending.renderDependentTypes(db);
-       });
-     })(jQuery)
-};
-
-alert("check point2");
 
 </script>
 
 
 <script>
-    yepnope({
-            load: [
-                   // 'http://wheredoesmymoneygo.org/wp-content/themes/wdmmg/wdmmg.css',
-                   'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.6/themes/ui-lightness/jquery-ui.css',
-                   'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js',
-                   '/js/libs/base64.js',
-                   '/js/libs/underscore.js',
-                   '/js/libs/raphael-min.js',
-                   '/js/aggregator.js',
-                   '/css/dailybread.css',
-                   '/js/setting.js?20120707',
-                   '/js/dailybread.js?20120707'
-                   ],
-            complete: display
+
+yepnope({
+  load: [
+    // 'http://wheredoesmymoneygo.org/wp-content/themes/wdmmg/wdmmg.css',
+    'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.6/themes/ui-lightness/jquery-ui.css',
+    'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js',
+    '/js/libs/base64.js',
+    '/js/libs/underscore.js',
+    '/js/libs/raphael-min.js',
+    '/js/aggregator.js',
+    '/css/dailybread.css',
+    '/js/setting.js?20120707',
+    '/js/dailybread.js?20120707'
+  ],
+  complete: function() {
+
+    (function ($) {
+
+      $(function () {
+
+        $('#preloader .txt').html('loading data');
+
+       var db = new OpenSpending.DailyBread($('#dailybread'));
+       new OpenSpending.Aggregator({
+           apiUrl: 'http://openspending.org/api',
+           //localApiCache: 'aggregate.json',
+           dataset: OpenSpending.identifier,
+           drilldowns: ['Category', 'Subcategory'],
+           cuts: ['year:' + OpenSpending.year],
+           rootNodeLabel: 'Total',
+           breakdown: 'Subcategory',
+           callback: function(data) {
+
+            $('#content-wrap').show();
+            $('#preloader').remove();
+
+            db.setDataFromAggregator(data, ['unknown']);
+            db.setIconLookup(function(name) {
+              var style = OpenSpending.Styles.Cofog[name];
+              if (style != undefined) {
+               return style['icon'];
+              }
+              return 'icons/unknown.svg';
             });
-    </script>
+            db.draw();
+           }
+        });
+
+        OpenSpending.renderDependentTypes(db);
+      });
+    })(jQuery)
+  }
+});
+
+
+</script>
 
 <div id="dailybread">
   <!--
@@ -118,21 +85,22 @@ alert("check point2");
   -->
   <div>
 
- <form name=selyear action="#">
-          <table>
-              <tr>
-                  <th>表示する年度を選んでください </th>
-                  <td>
-                      <select name="selectedYear" id="year" onchange="setData(this.form);" style="width:200px;">
-                          <option value="2014">2014年度</option>
-                          <option value="2013">2013年度</option>
-                          <!--<option value="2011">2011年度</option>-->
-                        <!--<option value="2010">2010年度</option>-->
-                      </select>
-                  </td>
-              </tr>
-          </table>
-      </form>
+  <form name=selyear action="#">
+      <table>
+          <tr>
+              <th>表示する年度を選んでください </th>
+              <td>
+                  <select name="selectedYear" id="year" onchange="setData(this.form);" style="width:200px;">
+                      <option value="2014">2014年度</option>
+                      <option value="2013">2013年度</option>
+                      <!--<option value="2011">2011年度</option>-->
+                    <!--<option value="2010">2010年度</option>-->
+                  </select>
+              </td>
+          </tr>
+      </table>
+  </form>
+
 
     <h2 style="width:240px;display:inline-block;vertical-align:top;">あなたの世帯タイプは？</h2>
     <div id="select-dependents-type" style="width:450px;display:inline-block;">
