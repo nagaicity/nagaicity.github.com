@@ -22,7 +22,7 @@ UseData.year = '2014';
 		var params = url.split("?");
 		var paramms = [];
 		//if( params.length >= 1 ) {
-/*
+
         if( params.length >= 2 ) {
 			paramms = params[1].split("&");
 		}
@@ -42,7 +42,6 @@ UseData.year = '2014';
 			UseData.year = "2014";
 			UseData.identifier = "nagai_budget_2014";
 		}
-*/
 
 OpenSpending.identifier = UseData.identifier;
 OpenSpending.year = UseData.year;
