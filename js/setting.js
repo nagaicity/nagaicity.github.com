@@ -63,6 +63,8 @@ var UseData = UseData || {};
 			break;
 	}
 
+checkSelect( document.getElementById( "year" ), UseData.year );
+
 OpenSpending.identifier = UseData.identifier;
 OpenSpending.year = UseData.year;
 
