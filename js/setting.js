@@ -33,15 +33,33 @@ UseData.year = '2014';
 	    	paramArray.push(item[0]);
 	    	paramArray[item[0]] = item[1];
 		}
-
+/*
 		if( paramArray["requestYear"] != null  && paramArray["requestName"] != null ) {
 			UseData.year = paramArray["requestYear"];
 			UseData.identifier = paramArray["requestName"];
-		}
-		else {
+		}else {
 			UseData.year = "2014";
 			UseData.identifier = "nagai_budget_2014";
 		}
+*/
+
+		if( paramArray["requestYear"] != null) {
+			UseData.year = paramArray["year"];
+		}else {
+			UseData.year = "2014";
+		}
+
+	switch(UseData.year){
+		case 2014:
+			UseData.identifier = "nagai_budget_2014";
+			break;
+		case 2013:
+			UseData.identifier = "nagai_budget_2013";
+			break;
+		default:
+			UseData.identifier = "nagai_budget_2014";
+			break;
+	}
 
 OpenSpending.identifier = UseData.identifier;
 OpenSpending.year = UseData.year;
