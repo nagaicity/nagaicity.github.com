@@ -10,11 +10,8 @@ Taxes.taxRate = 0.06; // 住民税率
 
 var OpenSpending = OpenSpending || {};
 
-//OpenSpending.identifier = 'nagai_budget_2013';
-//OpenSpending.year = '2013';
-
-OpenSpending.identifier = UseData.identifier;
-OpenSpending.year = UseData.year;
+OpenSpending.identifier = 'nagai_budget_2013';
+OpenSpending.year = '2013';
 
 OpenSpending.Styles = OpenSpending.Styles || {};
 
