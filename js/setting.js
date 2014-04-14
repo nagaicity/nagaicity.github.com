@@ -16,9 +16,6 @@ var OpenSpending = OpenSpending || {};
 OpenSpending.identifier = UseData.identifier;
 OpenSpending.year = UseData.year;
 
-alert(OpenSpending.identifier);
-alert(OpenSpending.year);
-
 OpenSpending.Styles = OpenSpending.Styles || {};
 
 OpenSpending.Styles.Cofog = {
