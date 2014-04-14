@@ -9,6 +9,7 @@ Taxes.huyoKoujo = 330000; // 一人分の扶養控除
 Taxes.taxRate = 0.06; // 住民税率
 
 var OpenSpending = OpenSpending || {};
+var UseData = UseData || {};
 
 //OpenSpending.identifier = 'nagai_budget_2014';
 //OpenSpending.year = '2014';
@@ -16,7 +17,6 @@ var OpenSpending = OpenSpending || {};
 UseData.identifier = 'nagai_budget_2014';
 UseData.year = '2014';
 
-		var UseData = UseData || {};
 
 		var url = location.href;
 		var params = url.split("?");
